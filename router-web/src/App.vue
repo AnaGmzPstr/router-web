@@ -1,12 +1,18 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import data from '@/assets/data.json';
+
+let jsonData = data;
+console.log(jsonData);
+
 </script>
 
 <template>
   <header>
     <nav id="nav">
       <ul>
-        <li><RouterLink to="/">Home</RouterLink></li>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink v-for="(country, index) in jsonData.destinations" :key="index" :to="country.id">{{ country.name }}</RouterLink>
       </ul>
     </nav>
   </header>
@@ -14,7 +20,6 @@ import { RouterLink, RouterView } from 'vue-router'
     <RouterView />
   </div>
 
-  <RouterView />
 </template>
 
 <style scoped></style>
