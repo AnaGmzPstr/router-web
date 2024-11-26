@@ -12,7 +12,7 @@ console.log(jsonData);
     <nav id="nav">
       <ul>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink v-for="(country, index) in jsonData.destinations" :key="index" :to="country.id">{{ country.name }}</RouterLink>
+        <RouterLink v-for="(country, index) in jsonData.destinations" :key="index" :to="'/countryDetails/'+country.id">{{ country.name }}</RouterLink>
       </ul>
     </nav>
   </header>

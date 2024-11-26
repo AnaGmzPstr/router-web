@@ -6,12 +6,11 @@ const pathImg = '../src/assets/images/'
 </script>
 
 <template>
-  <main>
+  <div class="home">
     <h1>All destinations</h1>
-    <div v-for="(country, index) in countryData.destinations" :key="index" class="destination-details">
-
+    <div v-for="(country, index) in countryData.destinations" :key="index">
         <img :src="pathImg + country.image" :alt="country.name" />
         <h2>{{ country.name }}</h2>
     </div>
-  </main>
+  </div>
 </template>
