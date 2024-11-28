@@ -1,5 +1,4 @@
 <script setup>
-/* import Home from '../components/Home.vue' */
 import data from '../assets/data.json'
 const countryData = data
 const pathImg = '../src/assets/images/'
