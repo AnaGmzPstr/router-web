@@ -16,8 +16,11 @@ const router = createRouter({
       component: () => import('../views/CountryDetailsView.vue'),
       children: [
         //TODO: mirar la vaina esta
-        //path:'/',
-        //name: 'countryDetails',
+        {
+          path: '/countryVisit/:index',
+          name: 'countryVisit',
+          component: () => import('../views/CountryVisitView.vue'),
+        }
       ]
     }
 
