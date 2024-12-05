@@ -19,7 +19,7 @@ let jsonData = data;
   
   <div class="container">
     <transition name="fade" mode="out-in">
-      <RouterView />
+      <RouterView :key="$route" />
     </transition>
   </div>
 
@@ -28,7 +28,7 @@ let jsonData = data;
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 1s, transform 1s;
+  transition: opacity .5s, transform .5s;
 }
 
 .fade-enter-from {

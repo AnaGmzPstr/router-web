@@ -47,3 +47,6 @@ watch(
         <RouterView/>
     </div>
 </template>
+
+<style>
+</style>
