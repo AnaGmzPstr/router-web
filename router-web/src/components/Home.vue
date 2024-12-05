@@ -1,7 +1,7 @@
 <script setup>
 import data from '../assets/data.json'
 const countryData = data
-const pathImg = '../src/assets/images/'
+const pathImg = '../images/'
 </script>
 
 <template>

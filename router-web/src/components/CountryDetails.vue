@@ -7,7 +7,7 @@ import { ref } from 'vue';
 import { watch } from 'vue';
 
 const countryData = data;
-const pathImg = '../src/assets/images/'
+const pathImg = '/images/'
 const route = useRoute();
 const id = ref(route.params.id - 1);
 
