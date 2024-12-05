@@ -35,15 +35,15 @@ watch(
             <h2>Top experiences in {{ countryData.destinations[id].name }}</h2>
             <div class="cards">
                 <div v-for="(visit, i) in countryData.destinations[id].experiences" :key="visit.name" class="card">
-                    <img :src="pathImg + visit.image" :alt="visit.name" />
                     <div >
                         <RouterLink :to="`/countryDetails/${route.params.id}/countryVisit/${i}`">
+                            <img :src="pathImg + visit.image" :alt="visit.name" />
                             {{ visit.name }}
                         </RouterLink>
                     </div>
                 </div>
             </div>
         </div>
+        <RouterView/>
     </div>
-    <RouterView/>
 </template>

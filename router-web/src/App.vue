@@ -3,7 +3,6 @@ import { RouterLink, RouterView } from 'vue-router'
 import data from '@/assets/data.json';
 
 let jsonData = data;
-console.log(jsonData);
 
 </script>
 
@@ -17,10 +16,28 @@ console.log(jsonData);
       </ul>
     </nav>
   </header>
+  
   <div class="container">
-    <RouterView />
+    <transition name="fade" mode="out-in">
+      <RouterView />
+    </transition>
   </div>
 
 </template>
 
-<style scoped></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s, transform 1s;
+}
+
+.fade-enter-from {
+  opacity: 0;
+  transform: translateX(30%);
+}
+
+.fade-leave-to {
+  opacity: 0;
+  transform: translateX(-30%);
+}
+</style>
