@@ -22,9 +22,8 @@ watch(
 
 const scroll=() =>{
     setTimeout(() => {
-
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }, 500)
+    }, 100)
 }
 </script>
 
@@ -32,7 +31,7 @@ const scroll=() =>{
     <div>
         <!-- <h1>{{ $route.params.id }}</h1> -->
         <h1>{{ countryData.destinations[id].name }}</h1>
-        <GoBack/>
+        <GoBack :id="id"/>
         <div class="destination-details">
             <img :src="pathImg + countryData.destinations[id].image" :alt="countryData.destinations[id].name" />
             <p>{{ countryData.destinations[id].description }}</p>
@@ -42,7 +41,7 @@ const scroll=() =>{
             <h2>Top experiences in {{ countryData.destinations[id].name }}</h2>
             <div class="cards">
                 <div v-for="(visit, i) in countryData.destinations[id].experiences" :key="visit.name" class="card">
-
+                    
                     <RouterLink :to="`/countryDetails/${route.params.id}/countryVisit/${i}`" @click="scroll">
                         <img :src="pathImg + visit.image" :alt="visit.name" />
                         <span class="card__text">{{ visit.name }}</span>
@@ -51,8 +50,11 @@ const scroll=() =>{
                 </div>
             </div>
         </div>
-        <RouterView />
+        <!-- <GoBack :id="id"/> -->
+        <RouterView  />
     </div>
 </template>
 
-<style></style>
+<style>
+
+</style>

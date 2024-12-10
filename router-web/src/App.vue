@@ -18,14 +18,16 @@ let jsonData = data;
   </header>
   
   <div class="container">
-    <transition name="fade" mode="out-in">
+    <!-- <transition name="fade" mode="out-in"> -->
       <RouterView :key="$route" />
-    </transition>
+    <!-- </transition> -->
   </div>
 
 </template>
 
 <style scoped>
+/* NOTA: He provat les animacions però s'aplicaben 
+a totes la pàgines i no he sapigut arreglar-ho */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity .5s, transform .5s;
